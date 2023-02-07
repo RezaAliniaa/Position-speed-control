@@ -1,0 +1,28 @@
+unsigned long TaskTime1=millis();
+unsigned long TaskTime2=millis();
+
+void setup() {
+  Serial.begin(115200);
+}
+
+void loop() {
+
+  //Task1
+  unsigned long cuTime=millis();
+  if (cuTime-TaskTime1>100){
+    Serial.print("HI");
+    Serial.println();
+    TaskTime1=cuTime;
+  }
+
+
+//  task2
+  unsigned long cuTime1=millis();
+  if (cuTime1-TaskTime2>2000){
+    Serial.print("HIiii");
+    Serial.println();
+
+    TaskTime2=cuTime1;
+    
+  }
+}
